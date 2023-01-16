@@ -4,39 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/componentes/main.css">
     <link rel="stylesheet" href="/css/index.css">
     <title>Social Music</title>
 </head>
 <body> 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary" style=" /* From https://css.glass */
-      background: rgba(0, 0, 0, 0.33);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(9.8px);
-      -webkit-backdrop-filter: blur(9.8px);
-      
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
-      top: 0;">
+  <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="background-color: #383838;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar Sesión</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Iniciar Sesion</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="background-color: #383838;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Crear cuenta</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Repite contraseña" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Crear cuenta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background: rgba(0, 0, 0, 0.33);box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);backdrop-filter: blur(9.8px);-webkit-backdrop-filter: blur(9.8px);position: -webkit-sticky; /* Safari */position: sticky;top: 0;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style="color: aliceblue;">SOCIAL MUSIC</a>
+            <a class="navbar-brand" href="/index.html" style="color: aliceblue;">SOCIAL MUSIC</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"style="color: aliceblue;">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"style="color: aliceblue;">Link</a>
+                  <a class="nav-link" href="/sobre-nosotros.html"style="color: aliceblue;">Sobre nosotros</a>
                 </li>
               </ul>
 
               <div>
-                <button type="button" class="btn btn-secondary">Login</button>
-                <button type="button" class="btn btn-dark">Sign Up</button>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal1">Accede</button>
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal2">Regístrate</button>
               </div>
 
             </div>
@@ -44,23 +89,105 @@
       </nav>
 
       <div class="contenedor">
-        <h1>Social Music</h1>
-        <h1>Management Platform</h1>
-        <p>Si necesitas contratar un servicio musical o ser contratado, este es tu lugar!</p>        
-        <p> ven y unete a esta grandiosa comunidad de musicos a nivel global</p>
-        <div class="contenedor-correo">
+        <div class="contenedor-titulo">
+          <h1>Social Music</h1>
+        </div>
+      </div>
+     
+      <div class="wrapper">
+        <div class="wrapper-info">
+          <div class="info">
+            <img src="/src/img/icon.png">
+            <div>
+              <p>Mas de 1.000 productores</p>
+              <p>Registrados en chile</p>
+            </div>
+          </div>
 
-          <div class="input-group mb-3">
-            <input type="mail" class="form-control" placeholder="Ingresa tu correo">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Empecemos</button>
+          <div class="info">
+            <img src="/src/img/icon2.png">
+            <div>
+              <p>Mas de 20.000 Músicos</p>
+              <p>Registrados en latinoamerica</p>
+            </div>
+          </div>
+
+          <div class="info">
+            <img src="/src/img/icon3.png">
+            <div>
+              <p>Mas de 10.000 Djs</p>
+              <p>Registrados en el mundo</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="contenedor-imagen">
-        <img class="img1" src="/src/img/imgfondo.jpg">
-        <img class="img2" src="/src/img/imgfondo2.jpg">
+      <hr>
+
+      <div class="wrapper">
+        <div class="wrapper-card">
+          <div class="card">
+            <img src="/src/logos/logo1.png">
+            <div class="card-texto">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <h5>Skrillex</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa id facere impedit? Quis vero</p>
+            </div>
+            <button type="button" class="btn btn-primary">Conectar</button>
+          </div>
+          
+          <div class="card">
+            <img src="/src/logos/logo2.png">
+            <div class="card-texto">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <h5>KISS</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa id facere impedit? Quis vero</p>
+            </div>
+            <button type="button" class="btn btn-primary">Conectar</button>
+          </div>
+
+          <div class="card">
+            <img src="/src/logos/logo3.png">
+            <div class="card-texto">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <h5>Linkin Park</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa id facere impedit? Quis vero</p>
+            </div>
+            <button type="button" class="btn btn-primary">Conectar</button>
+          </div>
+
+          <div class="card">
+            <img src="/src/logos/logo4.png">
+            <div class="card-texto">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <h5>Drake</h5>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsa id facere impedit? Quis vero</p>
+            </div>
+            <button type="button" class="btn btn-primary">Conectar</button>
+          </div>
+
+
+        </div>
       </div>
+
+
+
 
 
 
